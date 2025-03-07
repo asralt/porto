@@ -3,36 +3,24 @@ import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-gradient-to-br from-gray-900 to-black shadow-md fixed top-0 left-0 w-full z-50 p-4 border border-cyan-500">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        {/* ✅ Make "daisyUI" navigate to Hero Page */}
+        <Link to="/" className="text-xl font-bold text-cyan-400 hover:text-white transition">
+          daisyUI
+        </Link>
       </div>
 
-      <div className="flex-none space-x-4">
-        <Link to="/" className="btn btn-sm gap-2 transition-colors">
-          <span className="hidden sm:inline">Hero</span>
+      <div className="flex-none space-x-6">
+        <Link to="/" className="text-gray-300 hover:text-white transition text-lg">
+          Hero
         </Link>
-      
-        <Link to="/projects" className="btn btn-sm gap-2 transition-colors">
-          <span className="hidden sm:inline">Projects</span>
+        <Link to="/projects" className="text-gray-300 hover:text-white transition text-lg">
+          Projects
         </Link>
-        <Link to="/contact" className="btn btn-sm gap-2 transition-colors">
-          <span className="hidden sm:inline">Contact</span>
+        <Link to="/contact" className="text-gray-300 hover:text-white transition text-lg">
+          Contact
         </Link>
-
-        <button className="btn btn-square btn-ghost">
-          <svg
-            viewBox="0 0 24 24"
-            className="inline-block h-5 w-5 stroke-current"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-            ></path>
-          </svg>
-        </button>
       </div>
     </div>
   );

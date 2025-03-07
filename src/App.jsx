@@ -6,25 +6,11 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 
-import RotatingTorus from "./constants/Torus";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Stage } from "@react-three/drei";
-import { Suspense, useRef } from "react";
 
 function App() {
   return (
-    <div data-theme="synthwave">
-      <div className="torus-container"> 
-      <Canvas shadows camera={{ position: [0, 1.5, 4], fov: 50 }}>
-        <Suspense fallback={null}>
-          <Stage environment="city" intensity={0.5}>
-            <RotatingTorus />
-          </Stage>
-          <OrbitControls enableZoom={false} />
-        </Suspense>
-      </Canvas>
-        
-      </div>
+    //synthwave
+    <div data-theme="">
     <Router>
       <Navbar />
       <div className="">
